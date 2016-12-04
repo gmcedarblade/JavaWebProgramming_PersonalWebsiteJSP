@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Personal Website of Greg Cedarblade</title>
+	<title>The Personal Website of Greg Cedarblade: Contact</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<meta name="description" content="This is a personal website of Greg Cedarblade.">
+	<meta name="description" content="This page provides a way to connect with Greg Cedarblade.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/main.css" rel="stylesheet" type="text/css">
@@ -13,10 +13,10 @@
 <body>
 	<div class="container">
 		<div class="hero-unit">
-			<h1>Welcome to my website!</h1>
+			<h1>Contact Me</h1>
 		</div>
 		<div class="container">
-			<p>This is a basic website that provides you with information about me.</p>
+			<p>Include a short form for contacting</p>
 		</div>
 	</div>
 	<hr>
