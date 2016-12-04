@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +21,55 @@
 			<li><a href="contact.jsp">Contact</a></li>
 		</ul>
 		<div class="container">
-			<p>Include a short form for contacting</p>
+		<%
+		
+		if (null != request.getParameter("submit")) {
+			
+			final String firstName = request.getParameter("firstName");
+			final String lastName = request.getParameter("lastName");
+			final String emailAddress = request.getParameter("emailAddress");
+			
+			if (null != firstName && !firstName.isEmpty() 
+					&& null != lastName && !lastName.isEmpty()
+					&& null != emailAddress && !emailAddress.isEmpty()) {
+				%>
+				<p>Thank you <%=firstName %> <%=lastName %>, I will contact you soon at <%=emailAddress %></p>
+				<%
+				
+			} else {
+				
+				%>
+				<p>Sorry, you must complete all of the fields before submitting the contact form.</p>
+				<%
+				
+			}
+			
+			
+		} else {
+			
+			%>
+			<p>You can contact me by filling out this short form. I will use this information to contact you shortly.</p>
+				<form method="post">
+					<div class="form-group">
+						<label for="firstName"><strong>First Name:</strong></label>
+						<input name="firstName">
+						
+						<label for="lastName"><strong>Last Name:</strong></label>
+						<input name="lastName">
+						
+						<label for="emailAddress"><strong>Email Address:</strong></label>
+						<input name="emailAddress">
+						
+						<input class="btn btn-primary btn-lg" name="submit" type="submit" value="Connect!">
+					</div>
+				</form>
+			<%
+			
+			
+		}
+		
+		%>
+			
 		</div>
 	</div>
 	<hr>
