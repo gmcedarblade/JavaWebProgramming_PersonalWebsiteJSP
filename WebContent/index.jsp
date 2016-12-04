@@ -15,6 +15,11 @@
 		<div class="hero-unit">
 			<h1>Welcome to my website!</h1>
 		</div>
+		<ul class="nav nav-tabs">
+			<li><a href="index.jsp">Home</a></li>
+			<li><a href="about.jsp">About</a></li>
+			<li><a href="contact.jsp">Contact</a></li>
+		</ul>
 		<div class="container">
 			<p>This is a basic website that provides you with information about me.</p>
 		</div>
