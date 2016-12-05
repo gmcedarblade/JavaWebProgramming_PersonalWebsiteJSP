@@ -1,3 +1,6 @@
+<%@ page import="edu.cvtc.web.model.Person" %>
+<%@ page import="edu.cvtc.web.dao.PersonDao" %>
+<%@ page import="edu.cvtc.web.dao.impl.PersonDaoImpl" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -33,10 +36,22 @@
 					&& null != lastName && !lastName.isEmpty()
 					&& null != emailAddress && !emailAddress.isEmpty()) {
 				
-				// TODO
-				%>
-				<p>Thank you <%=firstName %> <%=lastName %>, I will contact you soon at <%=emailAddress %></p>
-				<%
+				try {
+					final Person person = new Person(firstName, lastName, emailAddress);
+					final PersonDao personDao = new PersonDaoImpl();
+					
+					personDao.insert(person);
+				
+					%>
+					<p>Thank you <%=person.getFirstName() %> <%=person.getLastName() %>, I will contact you soon at <%=person.getEmailAddress() %></p>
+					<%	
+				} catch (Exception e) {
+					%>
+					<p>Sorry, there was a problem adding you to the contact list.</p>
+					<p> Error: <%=e.getMessage() %></p>
+					<%
+				}
+				
 				
 			} else {
 				
