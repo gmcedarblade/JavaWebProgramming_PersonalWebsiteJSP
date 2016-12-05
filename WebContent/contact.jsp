@@ -32,6 +32,8 @@
 			if (null != firstName && !firstName.isEmpty() 
 					&& null != lastName && !lastName.isEmpty()
 					&& null != emailAddress && !emailAddress.isEmpty()) {
+				
+				// TODO
 				%>
 				<p>Thank you <%=firstName %> <%=lastName %>, I will contact you soon at <%=emailAddress %></p>
 				<%
