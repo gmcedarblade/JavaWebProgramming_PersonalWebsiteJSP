@@ -18,11 +18,7 @@
 		<div class="hero-unit">
 			<h1>Contact Me</h1>
 		</div>
-		<ul class="nav nav-tabs">
-			<li><a href="index.jsp">Home</a></li>
-			<li><a href="about.jsp">About</a></li>
-			<li><a href="contact.jsp">Contact</a></li>
-		</ul>
+		<%@ include file="includes/navigation.jsp" %>
 		<div class="container">
 		<%
 		

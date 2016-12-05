@@ -30,8 +30,8 @@ public class PersonDaoImpl implements PersonDao {
 
 		try {
 			statement.setQueryTimeout(DBUtility.TIMEOUT);
-			statement.executeQuery(DROP_TABLE_PERSON);
-			statement.execute(CREATE_TABLE_PERSON);
+			statement.executeUpdate(DROP_TABLE_PERSON);
+			statement.executeUpdate(CREATE_TABLE_PERSON);
 		} finally {
 			DBUtility.closeConnections(connection, statement);
 		}
@@ -56,7 +56,7 @@ public class PersonDaoImpl implements PersonDao {
 			
 			preparedStatement.setQueryTimeout(DBUtility.TIMEOUT);
 			
-			preparedStatement.executeQuery();
+			preparedStatement.executeUpdate();
 			
 		} finally {
 			DBUtility.closeConnections(connection, preparedStatement);
