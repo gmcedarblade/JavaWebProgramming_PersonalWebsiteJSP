@@ -17,7 +17,7 @@
 		<div class="hero-unit">
 			<h1>Create Database</h1>
 		</div>
-		<jsp:include page="includes/navigation.jsp"></jsp:include>
+		<%@ include file="includes/navigation.jsp" %>
 		<div class="container">
 		<%
 		

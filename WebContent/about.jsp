@@ -17,7 +17,7 @@
 		</div>
 		<%@ include file="includes/navigation.jsp" %>
 		<div class="container">
-			<p>Greg Cedarblade likes to workout, play some video games, and play D&D.</p>
+			<p>Greg Cedarblade likes to workout, play some video games, and play D and D.</p>
 		</div>
 	</div>
 	<hr>
